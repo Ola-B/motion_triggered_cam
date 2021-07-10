@@ -13,9 +13,11 @@ def motion(SENSOR_PIN):
     # Here, alternatively, an application / command etc. can be started.
     print("There was a movement!",str(datetime.datetime.now()))
     rc = subprocess.call("./webcam.sh")
+    time.sleep(10)
+    rc = subprocess.call("./git_push.sh")
 
 print("PIR setup...")
-time.sleep(2)
+time.sleep(5)
 print("Ready")
 
 try:
