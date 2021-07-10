@@ -16,10 +16,18 @@ def image_files():
     path = '/home/pi/git/github/motion_triggered_cam/images'
     files = os.listdir(path)
     file_html = open("/home/pi/git/github/motion_triggered_cam/index.html", "w")
+    file_html.writelines("<!DOCTYPE html>")
+    file_html.writelines("<html>")
+    file_html.writelines("<body>")
+
     for f in files:
         url = '"https://github.com/Ola-B/motion_triggered_cam/tree/main/images/'+f+'"'
         file_html.writelines("<img src="+url+" alt='Cat'>\n")
         print(f)
+    
+    file_html.writelines("</body>")
+    file_html.writelines("</html>")
+    
     file_html.close()
 
 def motion(SENSOR_PIN):
