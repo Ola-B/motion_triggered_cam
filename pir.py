@@ -3,7 +3,10 @@ import time
 import datetime
 import subprocess
 import os
- 
+
+# https://ola-b.github.io/motion_triggered_cam/
+
+
 SENSOR_PIN = 4
  
 GPIO.setmode(GPIO.BCM)
@@ -14,7 +17,8 @@ def image_files():
     files = os.listdir(path)
     file_html = open("/home/pi/git/github/motion_triggered_cam/index.html", "w")
     for f in files:
-        file_html.writelines(f+"\n")
+        url = '"https://github.com/Ola-B/motion_triggered_cam/tree/main/images/'+f+'"'
+        file_html.writelines("<img src="+url+" alt='Cat'>\n")
         print(f)
     file_html.close()
 
