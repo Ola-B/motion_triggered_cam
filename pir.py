@@ -15,22 +15,15 @@ GPIO.setup(SENSOR_PIN, GPIO.IN)
 #https://github.com/Ola-B/motion_triggered_cam/blob/main/images/2021-07-10T22:26:20.jpg?raw=true
 
 def image_files():
-    path = '/home/pi/git/github/motion_triggered_cam/images'
+    path = '/home/pi/git/github/motion_triggered_cam/docs/assests/images'
     files = os.listdir(path)
-    file_html = open("/home/pi/git/github/motion_triggered_cam/index.html", "w")
-    file_html.writelines("<!DOCTYPE html>")
-    file_html.writelines("<html>")
-    file_html.writelines("<body>")
+    file_md = open("/home/pi/git/github/motion_triggered_cam/docs/index.md", "w")
 
     for f in files:
-        url = '"https://github.com/Ola-B/motion_triggered_cam/tree/main/images/'+f+'?raw=true"'
-        file_html.writelines("<img src="+url+" alt='Cat'>\n")
         print(f)
-    
-    file_html.writelines("</body>")
-    file_html.writelines("</html>")
-    
-    file_html.close()
+        file_md.writelines("![Book logo](/motion_triggered_cam/assets/images/"+str(f))
+        
+    file_md.close()
 
 def motion(SENSOR_PIN):
     # Here, alternatively, an application / command etc. can be started.

@@ -2,4 +2,4 @@
 
 DATE=$(date +"%Y-%m-%dT%H:%M:%S")
 
-fswebcam -r 1280x720 /home/pi/git/github/motion_triggered_cam/images/$DATE.jpg
+fswebcam -r 1280x720 /home/pi/git/github/motion_triggered_cam/docs/assests/images/$DATE.jpg
