@@ -27,6 +27,9 @@ Syntax highlighted code block
 [Link](url) and ![Image](./images/2021-07-11T19:12:12.jpg)
 ```
 
+![Alt text](https://github.com/Ola-B/motion_triggered_cam/blob/main/images/2021-07-11T19:12:12.jpg "a title")
+
+
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
