@@ -24,7 +24,6 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-[Link](url) and ![Image](./images/2021-07-11T19:12:12.jpg)
 ```
 
 ![Alt text](https://github.com/Ola-B/motion_triggered_cam/blob/main/images/2021-07-11T19:12:12.jpg "a title")
