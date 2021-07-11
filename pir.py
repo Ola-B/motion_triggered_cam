@@ -15,13 +15,13 @@ GPIO.setup(SENSOR_PIN, GPIO.IN)
 #https://github.com/Ola-B/motion_triggered_cam/blob/main/images/2021-07-10T22:26:20.jpg?raw=true
 
 def image_files():
-    path = '/home/pi/git/github/motion_triggered_cam/docs/assests/images'
+    path = '/home/pi/git/github/motion_triggered_cam/docs/images'
     files = os.listdir(path)
     file_md = open("/home/pi/git/github/motion_triggered_cam/docs/index.md", "w")
 
     for f in files:
         print(f)
-        file_md.writelines("!["+str(f)+"](../assets/images/"+str(f)+")")
+        file_md.writelines("!["+str(f)+"](../images/"+str(f)+")")
         
     file_md.close()
 
@@ -31,9 +31,9 @@ def motion(SENSOR_PIN):
     print("There was a movement! New file: ",filename)
     rc = subprocess.call("./webcam.sh")
     time.sleep(2)
-    image_files()
+    # image_files()
     
-    rc = subprocess.call("./git_push.sh")
+    #rc = subprocess.call("./git_push.sh")
 
 print("PIR setup...")
 time.sleep(5)
