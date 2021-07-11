@@ -21,7 +21,7 @@ def image_files():
 
     for f in files:
         print(f)
-        file_md.writelines("![Book logo](/motion_triggered_cam/assets/images/"+str(f)+")\n")
+        file_md.writelines("!["+str(f)+"](/assets/images/"+str(f)+")\n")
         
     file_md.close()
 
