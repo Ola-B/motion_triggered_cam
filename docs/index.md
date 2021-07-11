@@ -1,1 +1,4 @@
-![Book logo](/motion_triggered_cam/assets/images/2021-07-11T09:08:48.jpg![Book logo](/motion_triggered_cam/assets/images/2021-07-10T22:26:20.jpg![Book logo](/motion_triggered_cam/assets/images/2021-07-11T09:09:20.jpg
+![Book logo](/motion_triggered_cam/assets/images/2021-07-11T09:08:48.jpg)
+![Book logo](/motion_triggered_cam/assets/images/2021-07-11T09:12:20.jpg)
+![Book logo](/motion_triggered_cam/assets/images/2021-07-10T22:26:20.jpg)
+![Book logo](/motion_triggered_cam/assets/images/2021-07-11T09:09:20.jpg)
