@@ -75,14 +75,14 @@ def build_html(image_list):
     for ii in range(0,len(image_list)):
         if ii==0:
             file_html.writelines('<div class="carousel-item active">\n')
-            file_html.writelines('<img src="images/'+image_list[ii]+'.jpg" alt="'+image_list[ii]+'" width="1100" height="500">\n')
+            file_html.writelines('<img src="images/'+image_list[ii]+'" alt="'+image_list[ii]+'" width="1100" height="500">\n')
             file_html.writelines('<div class="carousel-caption">\n')
             file_html.writelines('<p>'+image_list[ii]+'</p>\n')
             file_html.writelines('</div>\n')
             file_html.writelines('</div>\n')
         else:
             file_html.writelines('<div class="carousel-item">\n')
-            file_html.writelines('<img src="images/'+image_list[ii]+'.jpg" alt="'+image_list[ii]+'" width="1100" height="500">\n')
+            file_html.writelines('<img src="images/'+image_list[ii]+'" alt="'+image_list[ii]+'" width="1100" height="500">\n')
             file_html.writelines('<div class="carousel-caption">\n')
             file_html.writelines('<p>'+image_list[ii]+'</p>\n')
             file_html.writelines('</div>\n')
