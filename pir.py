@@ -42,7 +42,7 @@ See: [https://ola-b.github.io/motion_triggered_cam/](https://ola-b.github.io/mot
     file_md.writelines(static_md)
 
     for ii in range(0,len(image_list)):
-        file_md.writelines('!['+image_list[ii]+'](./images/'+image_list[ii]+' "'+image_list[ii]+'")\n')
+        file_md.writelines('!['+image_list[ii]+'](.docs/images/'+image_list[ii]+' "'+image_list[ii]+'")\n')
 
     # or use: ![Alt text](https://github.com/Ola-B/motion_triggered_cam/blob/main/images/img.jpg "a title")
 
