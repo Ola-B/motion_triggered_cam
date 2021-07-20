@@ -15,16 +15,23 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(SENSOR_PIN, GPIO.IN)
 
 def commit_and_push(image_list):
-    date_time_str_1 = image_list[0][0:len(image_list[0]) - 4]
-    date_time_str_2 = image_list[1][0:len(image_list[1]) - 4]
-    print(date_time_str_1)
-    print(date_time_str_2)
-    date_time_1 = parser.parse(date_time_str_1)
-    date_time_2 = parser.parse(date_time_str_2)
-
-    sec = (date_time_2 - date_time_1).total_seconds()
-    print("seconds: ",sec)
-    #rc = subprocess.call("./git_push.sh")
+    # Only try commit if more than two images...
+    if len(image_list)>=2:
+        # find index of the two last images
+        last_idx = len(image_list)-1
+        second_last_idx= len(image_list)-2
+        date_time_str_1 = image_list[second_last_idx][0:len(image_list[0]) - 4]
+        date_time_str_2 = image_list[last_idx][0:len(image_list[1]) - 4]
+        print(date_time_str_1)
+        print(date_time_str_2)
+        date_time_1 = parser.parse(date_time_str_1)
+        date_time_2 = parser.parse(date_time_str_2)
+        # calculate the number of seconds in between them
+        sec = (date_time_2 - date_time_1).total_seconds()
+        print("seconds: ",sec)
+        # If more than 600 sec then commit to github
+        if sec>600:
+            rc = subprocess.call("./git_push.sh")
 
 
 # ---------------------------------------------------------------- #
@@ -35,6 +42,8 @@ def build_readme(image_list):
 Raspberry motion detector (PIR) triggers webcam to take photo, create html with carusell showing the last n images.
 
 See: [https://ola-b.github.io/motion_triggered_cam/](https://ola-b.github.io/motion_triggered_cam/)\n
+
+Or images in ./docs/images/*.jpg
 """
 
     # create html file...
@@ -42,9 +51,12 @@ See: [https://ola-b.github.io/motion_triggered_cam/](https://ola-b.github.io/mot
     file_md.writelines(static_md)
 
     for ii in range(0,len(image_list)):
-        file_md.writelines('!['+image_list[ii]+'](.docs/images/'+image_list[ii]+' "'+image_list[ii]+'")\n')
+#        file_md.writelines('!['+image_list[ii]+'](.docs/images/'+image_list[ii]+' "'+image_list[ii]+'")\n')
+        file_md.writelines('!['+image_list[ii]+'](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/'+image_list[ii]+' "'+image_list[ii]+'")\n')
 
     # or use: ![Alt text](https://github.com/Ola-B/motion_triggered_cam/blob/main/images/img.jpg "a title")
+
+
 
     file_md.close()
 
