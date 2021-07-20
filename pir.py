@@ -153,6 +153,7 @@ def image_files():
             print("Deleting file: ",path+"/"+r)
 
     build_html(image_list)
+    build_readme(image_list)
     commit_and_push(image_list)
 
 # ---------------------------------------------------------------- #
