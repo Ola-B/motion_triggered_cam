@@ -30,7 +30,7 @@ def commit_and_push(image_list):
         sec = (date_time_2 - date_time_1).total_seconds()
         print("seconds: ",sec)
         # If more than 600 sec then commit to github
-        if sec>600:
+        if sec>1800:
             rc = subprocess.call("./git_push.sh")
 
 
@@ -164,9 +164,13 @@ def image_files():
             os.remove(path+"/"+r)
             print("Deleting file: ",path+"/"+r)
 
-    build_html(image_list)
-    build_readme(image_list)
-    commit_and_push(image_list)
+    if len(image_list)>=1:
+        # Build html for github pages
+        build_html(image_list)
+        # Build readme to also hold the images
+        build_readme(image_list)
+        # Commit changes to github
+        commit_and_push(image_list)
 
 # ---------------------------------------------------------------- #
 # 

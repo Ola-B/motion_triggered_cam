@@ -14,3 +14,4 @@ Or images in ./docs/images/*.jpg
 ![2021-07-20T22:14:37.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-20T22:14:37.jpg "2021-07-20T22:14:37.jpg")
 ![2021-07-20T22:21:43.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-20T22:21:43.jpg "2021-07-20T22:21:43.jpg")
 ![2021-07-20T22:32:06.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-20T22:32:06.jpg "2021-07-20T22:32:06.jpg")
+![2021-07-20T22:32:20.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-20T22:32:20.jpg "2021-07-20T22:32:20.jpg")
