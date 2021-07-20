@@ -26,6 +26,28 @@ def commit_and_push(image_list):
     print("seconds: ",sec)
     #rc = subprocess.call("./git_push.sh")
 
+
+# ---------------------------------------------------------------- #
+# 
+# ---------------------------------------------------------------- #
+def build_readme(image_list):
+    static_md ="""# Motion_triggered_cam
+Raspberry motion detector (PIR) triggers webcam to take photo, create html with carusell showing the last n images.
+
+See: [https://ola-b.github.io/motion_triggered_cam/](https://ola-b.github.io/motion_triggered_cam/)\n
+"""
+
+    # create html file...
+    file_md = open("/home/pi/git/github/motion_triggered_cam/README.md", "w")
+    file_md.writelines(static_md)
+
+    for ii in range(0,len(image_list)):
+        file_md.writelines('!['+image_list[ii]+'](./images/'+image_list[ii]+' "'+image_list[ii]+'")\n')
+
+    # or use: ![Alt text](https://github.com/Ola-B/motion_triggered_cam/blob/main/images/img.jpg "a title")
+
+    file_md.close()
+
 # ---------------------------------------------------------------- #
 # 
 # ---------------------------------------------------------------- #
@@ -103,14 +125,6 @@ def build_html(image_list):
     file_html.close()
 
 
-    pass
-    # todo
-    # - insert these into html
-    #file_md = open("/home/pi/git/github/motion_triggered_cam/docs/index.md", "w")
-    #print(f)
-    #file_md.writelines("!["+str(f)+"](../images/"+str(f)+")")
-        
-    #file_md.close()
 
 # ---------------------------------------------------------------- #
 # 
@@ -127,11 +141,12 @@ def image_files():
     image_list.sort()
     print("Images in directory: "+str(image_list)[1:-1])
 
-    # If more than 5 images remove the first so only 5 in total
-    if len(image_list)>5:
-        remove_images = image_list[0:len(image_list)-5] # get first images to remove
+    # If more than n images remove the first so only n in total
+    n = 10
+    if len(image_list)>n:
+        remove_images = image_list[0:len(image_list)-n] # get first images to remove
         print("Images to remove: ",remove_images)
-        image_list = image_list[-5:]                    # get last images to store
+        image_list = image_list[-n:]                    # get last images to store
         print("Images to keep: ",image_list)
         for r in remove_images:
             os.remove(path+"/"+r)
@@ -159,9 +174,8 @@ print("Ready")
 try:
     GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=motion)
     while 1:
-        time.sleep(500)
+        time.sleep(250)
 except KeyboardInterrupt:
     print("Finish...")
     GPIO.cleanup()
-    
     
