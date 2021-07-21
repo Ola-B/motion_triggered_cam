@@ -5,7 +5,6 @@ See: [https://ola-b.github.io/motion_triggered_cam/](https://ola-b.github.io/mot
 
 
 Or images in ./docs/images/*.jpg
-![2021-07-21T21:08:04.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-21T21:08:04.jpg "2021-07-21T21:08:04.jpg")
 ![2021-07-21T21:08:12.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-21T21:08:12.jpg "2021-07-21T21:08:12.jpg")
 ![2021-07-21T21:08:20.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-21T21:08:20.jpg "2021-07-21T21:08:20.jpg")
 ![2021-07-21T21:08:27.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-21T21:08:27.jpg "2021-07-21T21:08:27.jpg")
@@ -15,3 +14,4 @@ Or images in ./docs/images/*.jpg
 ![2021-07-21T21:09:00.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-21T21:09:00.jpg "2021-07-21T21:09:00.jpg")
 ![2021-07-21T21:09:09.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-21T21:09:09.jpg "2021-07-21T21:09:09.jpg")
 ![2021-07-21T21:09:16.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-21T21:09:16.jpg "2021-07-21T21:09:16.jpg")
+![2021-07-22T01:40:31.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-22T01:40:31.jpg "2021-07-22T01:40:31.jpg")
