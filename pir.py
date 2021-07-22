@@ -14,30 +14,44 @@ SENSOR_PIN = 4
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(SENSOR_PIN, GPIO.IN)
 
-def commit_and_push(image_list):
-    # Only try commit if more than two images...
-    if len(image_list)>=2:
-        # find index of the two last images
-        last_idx = len(image_list)-1
-        second_last_idx= len(image_list)-2
-        date_time_str_1 = image_list[second_last_idx][0:len(image_list[0]) - 4]
-        date_time_str_2 = image_list[last_idx][0:len(image_list[1]) - 4]
-        # print(date_time_str_1)
-        # print(date_time_str_2)
-        date_time_1 = parser.parse(date_time_str_1)
-        date_time_2 = parser.parse(date_time_str_2)
+def image_sec_diff(image_list):
+    """
+    Calculates time difference in sec between images in list
+    """
+    sec_diff = []
+    for d1, d2 in zip(image_list[1::],image_list[0::]):
+        date_time_1 = parser.parse(d1[0:len(d1) - 4])
+        date_time_2 = parser.parse(d2[0:len(d2) - 4])
         # calculate the number of seconds in between them
         sec = (date_time_2 - date_time_1).total_seconds()
-        print("seconds between last images: ",sec)
-        # If more than 600 sec then commit to github
-        if sec>1800:
-            rc = subprocess.call("./git_push.sh")
+        sec_diff.append(sec)
+    print("Seconds between images: " + str(sec_diff))
+    return sec_diff
 
+def commit_and_push(image_list):
+    """
+    Check if it is time to commit
+    """
+    sec_diff = image_sec_diff(image_list)
+
+    # Commit if more than 1800 sec between last images
+    if int(sec_diff[0])>1800:
+        rc = subprocess.call("./git_push.sh")
+        print("Images comited to github")
+    # also commit after a bunch of quick images in front of a long gap
+    if (int(sec_diff[0])<30 and int(sec_diff[1])<30 and int(sec_diff[2])<30 and int(sec_diff[3])<30 and int(sec_diff[4])>1800):
+        rc = subprocess.call("./git_push.sh")
+        print("Images comited to github")
+    
 
 # ---------------------------------------------------------------- #
 # 
 # ---------------------------------------------------------------- #
 def build_readme(image_list):
+    """
+    Makes a readme.md with link to images
+    """
+    
     static_md ="""# Motion_triggered_cam
 Raspberry motion detector (PIR) triggers webcam to take photo, create html with carusell showing the last n images.
 
@@ -64,6 +78,13 @@ Or images in ./docs/images/*.jpg
 # 
 # ---------------------------------------------------------------- #
 def build_html(image_list):
+    """
+    Makes a html page to go in the github pages a website
+    """
+    
+    # Sorts list reverse to get last image first
+    image_list.sort(reverse=True)
+    
     static_html_head ="""
 <!DOCTYPE html>
 <html lang="en">
@@ -109,14 +130,16 @@ def build_html(image_list):
     for ii in range(0,len(image_list)):
         if ii==0:
             file_html.writelines('<div class="carousel-item active">\n')
-            file_html.writelines('<img src="images/'+image_list[ii]+'" alt="'+image_list[ii]+'" width="1100" height="500">\n')
+#            file_html.writelines('<img src="images/'+image_list[ii]+'" alt="'+image_list[ii]+'" width="1100" height="500">\n')
+            file_html.writelines('<img src="images/'+image_list[ii]+'" alt="'+image_list[ii]+'" width="1280" height="720">\n')
             file_html.writelines('<div class="carousel-caption">\n')
             file_html.writelines('<p>'+image_list[ii]+'</p>\n')
             file_html.writelines('</div>\n')
             file_html.writelines('</div>\n')
         else:
             file_html.writelines('<div class="carousel-item">\n')
-            file_html.writelines('<img src="images/'+image_list[ii]+'" alt="'+image_list[ii]+'" width="1100" height="500">\n')
+#            file_html.writelines('<img src="images/'+image_list[ii]+'" alt="'+image_list[ii]+'" width="1100" height="500">\n')
+            file_html.writelines('<img src="images/'+image_list[ii]+'" alt="'+image_list[ii]+'" width="1280" height="720">\n')
             file_html.writelines('<div class="carousel-caption">\n')
             file_html.writelines('<p>'+image_list[ii]+'</p>\n')
             file_html.writelines('</div>\n')
@@ -141,6 +164,10 @@ def build_html(image_list):
 # 
 # ---------------------------------------------------------------- #
 def image_files():
+    """
+    Check what images we got and puts in a list
+    Removes (deletes) oldest image so not more than "n" images
+    """
     # Puts all filenames found in directory into a list
     path = '/home/pi/git/github/motion_triggered_cam/docs/images'
     files = os.listdir(path)
@@ -153,7 +180,7 @@ def image_files():
     # print("Images in directory: "+str(image_list)[1:-1])
 
     # If more than n images remove the first so only n in total
-    n = 15
+    n = 25
     if len(image_list)>n:
         remove_images = image_list[0:len(image_list)-n] # get first images to remove
         # print("Images to remove: ",remove_images)
@@ -175,6 +202,9 @@ def image_files():
 # 
 # ---------------------------------------------------------------- #
 def motion(SENSOR_PIN):
+    """
+    In case of a motion detection run webcam.sh script to take image with webcam
+    """
     # Here, alternatively, an application / command etc. can be started.
     filename = str(datetime.now())+".jpg"
     print("There was a movement! New file: ",filename)
@@ -190,7 +220,7 @@ print("Ready")
 try:
     GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=motion)
     while 1:
-        time.sleep(250)
+        time.sleep(7500)
 except KeyboardInterrupt:
     print("Finish...")
     GPIO.cleanup()
