@@ -190,7 +190,7 @@ print("Ready")
 try:
     GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=motion)
     while 1:
-        time.sleep(100)
+        time.sleep(250)
 except KeyboardInterrupt:
     print("Finish...")
     GPIO.cleanup()
