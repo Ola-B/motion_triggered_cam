@@ -153,7 +153,7 @@ def image_files():
     # print("Images in directory: "+str(image_list)[1:-1])
 
     # If more than n images remove the first so only n in total
-    n = 10
+    n = 15
     if len(image_list)>n:
         remove_images = image_list[0:len(image_list)-n] # get first images to remove
         # print("Images to remove: ",remove_images)
