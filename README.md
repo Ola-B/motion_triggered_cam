@@ -5,6 +5,10 @@ See: [https://ola-b.github.io/motion_triggered_cam/](https://ola-b.github.io/mot
 
 
 Or images in ./docs/images/*.jpg
+![2021-07-26T01:16:45.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-26T01:16:45.jpg "2021-07-26T01:16:45.jpg")
+![2021-07-26T01:16:37.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-26T01:16:37.jpg "2021-07-26T01:16:37.jpg")
+![2021-07-26T01:16:30.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-26T01:16:30.jpg "2021-07-26T01:16:30.jpg")
+![2021-07-26T01:16:24.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-26T01:16:24.jpg "2021-07-26T01:16:24.jpg")
 ![2021-07-26T01:15:55.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-26T01:15:55.jpg "2021-07-26T01:15:55.jpg")
 ![2021-07-25T23:51:47.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:51:47.jpg "2021-07-25T23:51:47.jpg")
 ![2021-07-25T23:51:39.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:51:39.jpg "2021-07-25T23:51:39.jpg")
@@ -26,7 +30,3 @@ Or images in ./docs/images/*.jpg
 ![2021-07-25T23:19:53.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:19:53.jpg "2021-07-25T23:19:53.jpg")
 ![2021-07-25T23:19:45.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:19:45.jpg "2021-07-25T23:19:45.jpg")
 ![2021-07-25T23:19:37.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:19:37.jpg "2021-07-25T23:19:37.jpg")
-![2021-07-25T23:19:28.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:19:28.jpg "2021-07-25T23:19:28.jpg")
-![2021-07-25T23:19:19.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:19:19.jpg "2021-07-25T23:19:19.jpg")
-![2021-07-25T23:19:11.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:19:11.jpg "2021-07-25T23:19:11.jpg")
-![2021-07-25T23:19:01.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-07-25T23:19:01.jpg "2021-07-25T23:19:01.jpg")
