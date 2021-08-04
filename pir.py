@@ -35,11 +35,11 @@ def commit_and_push(image_list):
     sec_diff = image_sec_diff(image_list)
 
     # Commit if more than 1800 sec between last images
-    if int(sec_diff[0])>1800:
+    if int(sec_diff[0])>200:
         rc = subprocess.call("./git_push.sh")
         print("Images comited to github")
     # also commit after a bunch of quick images in front of a long gap
-    if (int(sec_diff[0])<30 and int(sec_diff[1])<30 and int(sec_diff[2])<30 and int(sec_diff[3])<30 and int(sec_diff[4])>1800):
+    if (int(sec_diff[0])<30 and int(sec_diff[1])<30 and int(sec_diff[2])<30 and int(sec_diff[3])<30 and int(sec_diff[4])>200):
         rc = subprocess.call("./git_push.sh")
         print("Images comited to github")
     
@@ -209,7 +209,7 @@ def motion(SENSOR_PIN):
     filename = str(datetime.now())+".jpg"
     print("There was a movement! New file: ",filename)
     rc = subprocess.call("./webcam.sh")
-    time.sleep(2)
+    time.sleep(10)
     image_files()
     
 
@@ -220,7 +220,7 @@ print("Ready")
 try:
     GPIO.add_event_detect(SENSOR_PIN , GPIO.RISING, callback=motion)
     while 1:
-        time.sleep(20000)
+        time.sleep(2000)
 except KeyboardInterrupt:
     print("Finish...")
     GPIO.cleanup()
