@@ -5,6 +5,15 @@ See: [https://ola-b.github.io/motion_triggered_cam/](https://ola-b.github.io/mot
 
 
 Or images in ./docs/images/*.jpg
+![2021-08-05T18:06:00.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T18:06:00.jpg "2021-08-05T18:06:00.jpg")
+![2021-08-05T15:42:25.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:42:25.jpg "2021-08-05T15:42:25.jpg")
+![2021-08-05T15:42:14.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:42:14.jpg "2021-08-05T15:42:14.jpg")
+![2021-08-05T15:42:03.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:42:03.jpg "2021-08-05T15:42:03.jpg")
+![2021-08-05T15:41:52.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:41:52.jpg "2021-08-05T15:41:52.jpg")
+![2021-08-05T15:41:41.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:41:41.jpg "2021-08-05T15:41:41.jpg")
+![2021-08-05T15:41:31.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:41:31.jpg "2021-08-05T15:41:31.jpg")
+![2021-08-05T15:41:20.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:41:20.jpg "2021-08-05T15:41:20.jpg")
+![2021-08-05T15:41:09.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:41:09.jpg "2021-08-05T15:41:09.jpg")
 ![2021-08-05T15:40:56.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:40:56.jpg "2021-08-05T15:40:56.jpg")
 ![2021-08-05T15:40:45.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:40:45.jpg "2021-08-05T15:40:45.jpg")
 ![2021-08-05T15:40:34.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:40:34.jpg "2021-08-05T15:40:34.jpg")
@@ -21,12 +30,3 @@ Or images in ./docs/images/*.jpg
 ![2021-08-05T15:03:48.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:03:48.jpg "2021-08-05T15:03:48.jpg")
 ![2021-08-05T15:03:37.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:03:37.jpg "2021-08-05T15:03:37.jpg")
 ![2021-08-05T15:03:26.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:03:26.jpg "2021-08-05T15:03:26.jpg")
-![2021-08-05T15:03:15.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:03:15.jpg "2021-08-05T15:03:15.jpg")
-![2021-08-05T15:03:04.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:03:04.jpg "2021-08-05T15:03:04.jpg")
-![2021-08-05T15:02:53.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:02:53.jpg "2021-08-05T15:02:53.jpg")
-![2021-08-05T15:02:42.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:02:42.jpg "2021-08-05T15:02:42.jpg")
-![2021-08-05T15:02:32.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:02:32.jpg "2021-08-05T15:02:32.jpg")
-![2021-08-05T15:02:21.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:02:21.jpg "2021-08-05T15:02:21.jpg")
-![2021-08-05T15:02:10.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:02:10.jpg "2021-08-05T15:02:10.jpg")
-![2021-08-05T15:01:59.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:01:59.jpg "2021-08-05T15:01:59.jpg")
-![2021-08-05T15:01:48.jpg](https://github.com/Ola-B/motion_triggered_cam/blob/main/docs/images/2021-08-05T15:01:48.jpg "2021-08-05T15:01:48.jpg")
